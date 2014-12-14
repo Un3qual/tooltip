@@ -1,2 +1,2 @@
-Squishel Tooltips
+tooltip
 =======
