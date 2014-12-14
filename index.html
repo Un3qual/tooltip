@@ -1,37 +1,44 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset='utf-8'>
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
     <title>Tooltip by Un3qual</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
   </head>
-
   <body>
-    <div id="container">
-      <div class="inner">
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="https://github.com/Un3qual/tooltip">View On GitHub</a></li>
+          <li class="downloads"><a href="https://github.com/Un3qual/tooltip/zipball/master">ZIP</a></li>
+          <li class="downloads"><a href="https://github.com/Un3qual/tooltip/tarball/master">TAR</a></li>
+          <li class="title">DOWNLOADS</li>
+        </nav>
+      </div><!-- end header -->
 
-        <header>
+    <div class="wrapper">
+
+      <section>
+        <div id="title">
           <h1>Tooltip</h1>
-          <h2></h2>
-        </header>
+          <p></p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="https://github.com/Un3qual">Un3qual</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
+        </div>
 
-        <section id="downloads" class="clearfix">
-          <a href="https://github.com/Un3qual/tooltip/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
-          <a href="https://github.com/Un3qual/tooltip/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
-          <a href="https://github.com/Un3qual/tooltip" id="view-on-github" class="button"><span>View on GitHub</span></a>
-        </section>
-
-        <hr>
-
-        <section id="main_content">
-          <h1>
+        <h1>
 <a id="tooltips" class="anchor" href="#tooltips" aria-hidden="true"><span class="octicon octicon-link"></span></a><strong>Tooltips</strong>
 </h1>
 
@@ -45,21 +52,22 @@
 <h3>
 <a id="examples" class="anchor" href="#examples" aria-hidden="true"><span class="octicon octicon-link"></span></a>Examples</h3>
 
-<div class="highlight highlight-html"><pre>&lt;<span class="pl-ent">p</span>&gt;I gobble down a row of Double Stuf &lt;<span class="pl-ent">span</span> <span class="pl-e">data-tooltip</span>=<span class="pl-s1"><span class="pl-pds">"</span>YUCK!<span class="pl-pds">"</span></span>&gt;Golden&lt;/<span class="pl-ent">span</span>&gt; Oreos and a peanut butter sandwich, all sloshed down with a pint of chocolate milk. Later in the afternoon I stop at Five Guys to devour a &lt;<span class="pl-ent">span</span> <span class="pl-e">data-tooltip</span>=<span class="pl-s1"><span class="pl-pds">"</span>a fuck ton of bacon<span class="pl-pds">"</span></span>&gt;double bacon&lt;/<span class="pl-ent">span</span>&gt; cheeseburger and a monster order of sodium-loaded fries. Finally, before going to bed, I knock off a bag of &lt;<span class="pl-ent">span</span> <span class="pl-e">data-tooltip</span>=<span class="pl-s1"><span class="pl-pds">"</span>Okay, I want<span class="pl-pds">"</span></span>&gt;Philly Cheese Steak Rippled Potato Chips&lt;/<span class="pl-ent">span</span>&gt;--&lt;<span class="pl-ent">span</span> <span class="pl-e">data-tooltip</span>=<span class="pl-s1"><span class="pl-pds">"</span>I just had a thought-mouthgasm<span class="pl-pds">"</span></span>&gt;dripping with onion dip&lt;/<span class="pl-ent">span</span>&gt;.&lt;/<span class="pl-ent">p</span>&gt;</pre></div>
+<div class="highlight highlight-html"><pre>&lt;<span class="pl-ent">p</span>&gt;I gobble down a row of Double Stuf &lt;<span class="pl-ent">span</span> <span class="pl-e">data-tooltip</span>=<span class="pl-s1"><span class="pl-pds">"</span>YUCK!<span class="pl-pds">"</span></span>&gt;Golden&lt;/<span class="pl-ent">span</span>&gt; Oreos and a peanut butter sandwich, all sloshed down with a pint of chocolate milk. 
+
+Later in the afternoon I stop at Five Guys to devour a &lt;<span class="pl-ent">span</span> <span class="pl-e">data-tooltip</span>=<span class="pl-s1"><span class="pl-pds">"</span>a fuck ton of bacon<span class="pl-pds">"</span></span>&gt;double bacon&lt;/<span class="pl-ent">span</span>&gt; cheeseburger and a monster order of sodium-loaded fries. 
+
+Finally, before going to bed, I knock off a bag of &lt;<span class="pl-ent">span</span> <span class="pl-e">data-tooltip</span>=<span class="pl-s1"><span class="pl-pds">"</span>Okay, I want<span class="pl-pds">"</span></span>&gt;Philly Cheese Steak Rippled Potato Chips&lt;/<span class="pl-ent">span</span>&gt;--&lt;<span class="pl-ent">span</span> <span class="pl-e">data-tooltip</span>=<span class="pl-s1"><span class="pl-pds">"</span>I just had a thought-mouthgasm<span class="pl-pds">"</span></span>&gt;dripping with onion dip&lt;/<span class="pl-ent">span</span>&gt;.&lt;/<span class="pl-ent">p</span>&gt;</pre></div>
 
 <h3>
 <a id="contributing" class="anchor" href="#contributing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contributing</h3>
 
 <p>Want to make a theme? Submit a pull-request with your theme!<br>
 Found an issue? Create one <a href="https://github.com/Un3qual/tooltip/issues">here</a></p>
-        </section>
+      </section>
 
-        <footer>
-          Tooltip is maintained by <a href="https://github.com/Un3qual">Un3qual</a><br>
-          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
-        </footer>
-
-                  <script type="text/javascript">
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+              <script type="text/javascript">
             var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
             document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
           </script>
@@ -70,7 +78,5 @@ Found an issue? Create one <a href="https://github.com/Un3qual/tooltip/issues">h
             } catch(err) {}
           </script>
 
-      </div>
-    </div>
   </body>
 </html>
